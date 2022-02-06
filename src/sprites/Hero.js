@@ -18,10 +18,37 @@ class Hero extends Sprite {
     this.ty = null;
     this.animOverride = false;
     this.animDirection = 'down';
+    this.pointerDownTime = Date.now();
+    this.doubleTapThreshold = 200;
 
     this.scene.input.on('pointerdown', ({ worldX, worldY }) => {
-      this.tx = worldX;
-      this.ty = worldY;
+      console.log(Date.now() - this.pointerDownTime);
+      const isDoubleTap = (Date.now() - this.pointerDownTime < this.doubleTapThreshold);
+      const isSingleTap = !isDoubleTap;
+
+      if (!this.animOverride) {
+        if (isDoubleTap) {
+          this.tx = null;
+          this.ty = null;
+          this.body.reset(this.x, this.y);
+          this.animOverride = true;
+  
+          this.play(`anim-hero-attack-${this.animDirection}`);
+        }
+        else if (isSingleTap) {
+          this.tx = worldX;
+          this.ty = worldY;
+        }
+      }
+
+      this.pointerDownTime = Date.now();
+    });
+
+    // Animation triggers
+    this.on('animationcomplete', ({ key }) => {
+      if (key.startsWith('anim-hero-attack')) {
+        this.animOverride = false;
+      }
     });
   }
 
