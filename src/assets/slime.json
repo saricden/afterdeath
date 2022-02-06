@@ -1,0 +1,188 @@
+{
+	"textures": [
+		{
+			"image": "slime.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 247,
+				"h": 140
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Slime_Death_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 143,
+						"w": 160,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 160,
+						"h": 17
+					}
+				},
+				{
+					"filename": "Slime_Death_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 115,
+						"w": 122,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 20,
+						"w": 122,
+						"h": 45
+					}
+				},
+				{
+					"filename": "Slime_Walk_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 131,
+						"w": 118,
+						"h": 29
+					},
+					"frame": {
+						"x": 1,
+						"y": 67,
+						"w": 118,
+						"h": 29
+					}
+				},
+				{
+					"filename": "Slime_Walk_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 119,
+						"w": 102,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 98,
+						"w": 102,
+						"h": 41
+					}
+				},
+				{
+					"filename": "Slime_Death_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 115,
+						"w": 78,
+						"h": 45
+					},
+					"frame": {
+						"x": 163,
+						"y": 1,
+						"w": 78,
+						"h": 45
+					}
+				},
+				{
+					"filename": "Slime_Walk_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 131,
+						"w": 94,
+						"h": 29
+					},
+					"frame": {
+						"x": 125,
+						"y": 48,
+						"w": 94,
+						"h": 29
+					}
+				},
+				{
+					"filename": "Slime_Death_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 131,
+						"w": 86,
+						"h": 29
+					},
+					"frame": {
+						"x": 121,
+						"y": 79,
+						"w": 86,
+						"h": 29
+					}
+				},
+				{
+					"filename": "Slime_Walk_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 135,
+						"w": 141,
+						"h": 25
+					},
+					"frame": {
+						"x": 105,
+						"y": 110,
+						"w": 141,
+						"h": 25
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4b95ae841f75270564297550e62cd988:90b2af64e5d10b565a5b805b430ac28b:5969a7bd39dc609f49b3bb3f3e71107a$"
+	}
+}

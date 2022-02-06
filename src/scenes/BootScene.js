@@ -22,17 +22,25 @@ class BootScene extends Scene {
     this.load.spritesheet('hero-walk-up', 'assets/RPGMCharacter_v1.0/_up walk.png', x64);
     this.load.spritesheet('hero-attack-up', 'assets/RPGMCharacter_v1.0/_up attack.png', x64);
 
+    // Plant enemy spritesheet
+    this.load.atlas('slime', 'assets/slime.png', 'assets/slime.json');
+
     // Maps
     this.load.tilemapTiledJSON('map-overworld', 'assets/maps/overworld.json');
     this.load.image('postapo', 'assets/PALands_DEMO/DEMO-ex.png');
 
     // Music
     this.load.audio('music-flaremain', 'assets/audio/flaremain.mp3');
+    this.load.audio('music-determined-pursuit', 'assets/audio/determined_pursuit_loop.mp3');
 
     // Voices
-    this.load.audio('voice-sean-attack0', 'assets/audio/grunting_1_sean.wav')
-    this.load.audio('voice-sean-attack1', 'assets/audio/grunting_2_sean.wav')
-    this.load.audio('voice-sean-attack2', 'assets/audio/grunting_6_sean.wav')
+    this.load.audio('voice-sean-attack0', 'assets/audio/grunting_1_sean.wav');
+    this.load.audio('voice-sean-attack1', 'assets/audio/grunting_2_sean.wav');
+    this.load.audio('voice-sean-attack2', 'assets/audio/grunting_6_sean.wav');
+
+    // UI
+    this.load.image('ui-target-red', 'assets/Ardentryst-target2.png');
+    this.load.image('ui-target-green', 'assets/Ardentryst-target.png');
   }
 
   create() {
@@ -98,6 +106,19 @@ class BootScene extends Scene {
       frames: this.anims.generateFrameNumbers('hero-attack-up', { start: 0, end: 2 }),
       frameRate: 12,
       repeat: 0
+    });
+
+    this.anims.create({
+      key: 'anim-slime-walk',
+      frames: this.anims.generateFrameNames('slime', {
+        prefix: 'Slime_Walk_',
+        suffix: '.png',
+        zeroPad: 0,
+        start: 0,
+        end: 3
+      }),
+      frameRate: 6,
+      repeat: -1
     });
 
     // this.sound.setVolume(0);
