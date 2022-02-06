@@ -28,6 +28,11 @@ class BootScene extends Scene {
 
     // Music
     this.load.audio('music-flaremain', 'assets/audio/flaremain.mp3');
+
+    // Voices
+    this.load.audio('voice-sean-attack0', 'assets/audio/grunting_1_sean.wav')
+    this.load.audio('voice-sean-attack1', 'assets/audio/grunting_2_sean.wav')
+    this.load.audio('voice-sean-attack2', 'assets/audio/grunting_6_sean.wav')
   }
 
   create() {
@@ -95,7 +100,7 @@ class BootScene extends Scene {
       repeat: 0
     });
 
-    this.sound.setVolume(0);
+    // this.sound.setVolume(0);
 
     this.scene.start('scene-overworld');
   }

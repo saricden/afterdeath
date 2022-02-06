@@ -22,7 +22,6 @@ class Hero extends Sprite {
     this.doubleTapThreshold = 200;
 
     this.scene.input.on('pointerdown', ({ worldX, worldY }) => {
-      console.log(Date.now() - this.pointerDownTime);
       const isDoubleTap = (Date.now() - this.pointerDownTime < this.doubleTapThreshold);
       const isSingleTap = !isDoubleTap;
 
@@ -34,6 +33,9 @@ class Hero extends Sprite {
           this.animOverride = true;
   
           this.play(`anim-hero-attack-${this.animDirection}`);
+          
+          const ri = pMath.Between(0, 2);
+          this.scene.sound.play(`voice-sean-attack${ri}`);
         }
         else if (isSingleTap) {
           this.tx = worldX;
